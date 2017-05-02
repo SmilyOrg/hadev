@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  home-assistant:
+    image: hadev/base
+    build:
+      context: .
+    ports:
+      - "8123:8123"
+    volumes:
+      - ./home-assistant:/usr/local/src/hadev/home-assistant
+      - ./config:/usr/local/src/hadev/config
